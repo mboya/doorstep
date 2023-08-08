@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  uniq_code: MyString
+  credit_in_cents: MyString
+  debit_in_cents: MyString
+
+two:
+  user: two
+  uniq_code: MyString
+  credit_in_cents: MyString
+  debit_in_cents: MyString
