@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wallet: one
+  txn_id: MyString
+  amount_in_cents: 1
+  txn_type: MyString
+
+two:
+  wallet: two
+  txn_id: MyString
+  amount_in_cents: 1
+  txn_type: MyString
