@@ -52,6 +52,8 @@
     <orderEntry type="library" scope="PROVIDED" name="devise (v4.9.2, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="doorkeeper (v5.6.6, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="doorkeeper-jwt (v0.4.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv (v2.8.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv-rails (v2.8.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.12.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faker (v3.1.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gli (v2.21.1, RVM: ruby-3.1.2) [gem]" level="application" />
@@ -81,6 +83,7 @@
     <orderEntry type="library" scope="PROVIDED" name="parallel (v1.23.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parser (v3.2.2.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v1.5.3, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="phonelib (v0.7.7, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v5.6.6, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="racc (v1.7.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.7, RVM: ruby-3.1.2) [gem]" level="application" />
@@ -88,6 +91,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v2.1.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v7.0.6, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.1.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-healthcheck (v1.4.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.6.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v7.0.6, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rainbow (v3.1.1, RVM: ruby-3.1.2) [gem]" level="application" />
@@ -139,6 +143,7 @@
         <option value="doorkeeper:previous_refresh_token" />
         <option value="doorkeeper:views" />
         <option value="generator" />
+        <option value="healthcheck:install" />
         <option value="integration_test" />
         <option value="job" />
         <option value="jsonapi:controller" />
@@ -195,6 +200,7 @@
         <option value="doorkeeper:previous_refresh_token" />
         <option value="doorkeeper:views" />
         <option value="generator" />
+        <option value="healthcheck:install" />
         <option value="integration_test" />
         <option value="job" />
         <option value="jsonapi:controller" />
@@ -271,6 +277,8 @@
               <RakeTaskImpl description="" fullCommand="active_storage:update" id="update" />
             </subtasks>
           </RakeTaskImpl>
+          <RakeTaskImpl description="Add schema information (as comments) to model and fixture files" fullCommand="annotate_models" id="annotate_models" />
+          <RakeTaskImpl description="Adds the route map to routes.rb" fullCommand="annotate_routes" id="annotate_routes" />
           <RakeTaskImpl id="app">
             <subtasks>
               <RakeTaskImpl description="Applies the template supplied by LOCATION=(/path/to/template) or URL" fullCommand="app:template" id="template" />
@@ -404,6 +412,8 @@
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl description="Prints out your Rack middleware stack" fullCommand="middleware" id="middleware" />
+          <RakeTaskImpl description="Remove schema information from model and fixture files" fullCommand="remove_annotation" id="remove_annotation" />
+          <RakeTaskImpl description="Removes the route map from routes.rb" fullCommand="remove_routes" id="remove_routes" />
           <RakeTaskImpl description="Restart app by touching tmp/restart.txt" fullCommand="restart" id="restart" />
           <RakeTaskImpl description="Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions)" fullCommand="secret" id="secret" />
           <RakeTaskImpl description="Report code statistics (KLOCs, etc) from the application or engine" fullCommand="stats" id="stats" />

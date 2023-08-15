@@ -1,0 +1,2 @@
+class ProductRoutesController < ApplicationController
+end

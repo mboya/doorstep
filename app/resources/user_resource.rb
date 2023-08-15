@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class UserResource < JSONAPI::Resource
   caching
-  attributes :names, :phone, :wallet
+  attributes :names, :phone, :country_code, :wallet
 
   def names
     "#{@model.last_name}, #{@model.first_name}"

@@ -69,4 +69,6 @@ Rails.application.configure do
   config.hosts = [
     # '1b00-102-140-220-58.ngrok-free.app'
   ]
+
+  config.active_record.logger = nil
 end
